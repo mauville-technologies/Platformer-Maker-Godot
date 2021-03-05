@@ -1,0 +1,371 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://src/Levels/MainMenuLevel/PlayRootMenuView/PlayRootMenuView.gd" type="Script" id=1]
+[ext_resource path="res://addons/FontAwesome/fontawesome-webfont.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://addons/FontAwesome/FontAwesome.gd" type="Script" id=4]
+[ext_resource path="res://src/Levels/MainMenuLevel/main_menu_theme.tres" type="Theme" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 32
+font_data = ExtResource( 3 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "buttons_fly_in"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Level1:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.4, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 152, 1111.92 ), Vector2( 152, 1052.68 ), Vector2( 152, 917.175 ), Vector2( 152, 881.375 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Level2:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.4, 0.6, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 476, 1111.92 ), Vector2( 476, 1099.04 ), Vector2( 476, 985.909 ), Vector2( 476, 912.878 ), Vector2( 476, 881.375 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Level3:rect_position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.1, 0.4, 0.6, 0.7, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 800, 1109.06 ), Vector2( 800, 1159.18 ), Vector2( 800, 1051.78 ), Vector2( 800, 962.998 ), Vector2( 800, 914.31 ), Vector2( 800, 881.375 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Level4:rect_position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.4, 0.6, 0.7, 0.8, 0.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1124, 1098.5 ), Vector2( 1124, 1098.5 ), Vector2( 1124, 1021.67 ), Vector2( 1124, 963.214 ), Vector2( 1124, 916.449 ), Vector2( 1124, 881.375 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Level5:rect_position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.4, 0.6, 0.7, 0.9, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1448, 1101.84 ), Vector2( 1448, 1101.84 ), Vector2( 1448, 1068.44 ), Vector2( 1448, 1014.99 ), Vector2( 1448, 936.491 ), Vector2( 1448, 881.375 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "start_state"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Level1:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 152, 1111.92 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Level2:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 476, 1111.92 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Level3:rect_position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 800, 1109.06 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Level4:rect_position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1124, 1098.5 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Level5:rect_position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1448, 1101.84 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Control:rect_rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.5, 0.7, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ -360.0, -266.3, -175.6, -84.9, 0.0 ]
+}
+
+[sub_resource type="DynamicFont" id=5]
+size = 100
+font_data = ExtResource( 3 )
+
+[node name="PlayRootMenuView" type="Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( -970, -180 )
+theme = ExtResource( 5 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Loaded" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BackButton" type="Button" parent="Loaded"]
+margin_right = 64.0
+margin_bottom = 64.0
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="FontAwesome" type="Label" parent="Loaded/BackButton"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -13.5
+margin_top = -16.5
+margin_right = 13.5
+margin_bottom = 16.5
+custom_fonts/font = SubResource( 1 )
+text = ""
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+size = 32
+icon = "arrow-left"
+
+[node name="Level1" type="Button" parent="Loaded"]
+margin_left = 152.0
+margin_top = 1111.92
+margin_right = 472.0
+margin_bottom = 1271.92
+rect_min_size = Vector2( 320, 160 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Loaded/Level1"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "Level 1"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Level2" type="Button" parent="Loaded"]
+margin_left = 476.0
+margin_top = 1111.92
+margin_right = 796.0
+margin_bottom = 1271.92
+rect_min_size = Vector2( 320, 160 )
+
+[node name="Label" type="Label" parent="Loaded/Level2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "Level 2"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Level3" type="Button" parent="Loaded"]
+margin_left = 800.0
+margin_top = 1109.06
+margin_right = 1120.0
+margin_bottom = 1269.06
+rect_min_size = Vector2( 320, 160 )
+
+[node name="Label" type="Label" parent="Loaded/Level3"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "Level 3"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Level4" type="Button" parent="Loaded"]
+margin_left = 1124.0
+margin_top = 1098.5
+margin_right = 1444.0
+margin_bottom = 1258.5
+rect_min_size = Vector2( 320, 160 )
+
+[node name="Label" type="Label" parent="Loaded/Level4"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "Level 4"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Level5" type="Button" parent="Loaded"]
+margin_left = 1448.0
+margin_top = 1101.84
+margin_right = 1768.0
+margin_bottom = 1261.85
+rect_min_size = Vector2( 320, 160 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Loaded/Level5"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "Level 5"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="Loaded"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -873.0
+margin_top = -470.979
+margin_right = 873.0
+margin_bottom = 321.021
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="GridContainer" type="GridContainer" parent="Loaded/Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 16.0
+margin_top = 16.0
+margin_right = -16.0
+margin_bottom = -16.0
+custom_constants/hseparation = 16
+columns = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="Loaded/Panel/GridContainer"]
+margin_right = 608.0
+margin_bottom = 760.0
+rect_min_size = Vector2( 608, 508 )
+size_flags_vertical = 3
+
+[node name="LoadedPlayer" type="AnimationPlayer" parent="Loaded"]
+autoplay = "start_state"
+anims/buttons_fly_in = SubResource( 2 )
+anims/start_state = SubResource( 3 )
+
+[node name="Loading" type="Control" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Loading"]
+autoplay = "loading-spin"
+anims/loading-spin = SubResource( 4 )
+
+[node name="Control" type="Control" parent="Loading"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -20.0
+margin_top = -20.0
+margin_right = 20.0
+margin_bottom = 20.0
+rect_rotation = -129.455
+
+[node name="FontAwesomeLabel" type="Label" parent="Loading/Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -84.1385
+margin_top = -84.2369
+margin_right = 43.8615
+margin_bottom = 43.7631
+custom_fonts/font = SubResource( 5 )
+text = ""
+align = 1
+valign = 1
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+size = 100
+icon = "circle-notch"
+[connection signal="pressed" from="Loaded/BackButton" to="." method="_back_button"]

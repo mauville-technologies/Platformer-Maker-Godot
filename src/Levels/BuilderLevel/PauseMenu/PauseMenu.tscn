@@ -1,0 +1,729 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://fonts/neuropol x rg.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://src/Levels/BuilderLevel/PauseMenu/PauseMenu.gd" type="Script" id=2]
+[ext_resource path="res://addons/FontAwesome/fontawesome-webfont.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://addons/FontAwesome/FontAwesome.gd" type="Script" id=4]
+[ext_resource path="res://src/Levels/MainMenuLevel/main_menu_theme.tres" type="Theme" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 24
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 24
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 24
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 24
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 24
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 20
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=8]
+size = 24
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=9]
+size = 24
+font_data = ExtResource( 1 )
+
+[node name="PauseMenu" type="CanvasLayer"]
+layer = 0
+script = ExtResource( 2 )
+
+[node name="MainPanel" type="Panel" parent="."]
+visible = false
+modulate = Color( 1, 1, 1, 0.866667 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -300.0
+margin_top = -169.5
+margin_right = 300.0
+margin_bottom = 169.5
+theme = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="MainPanel"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -113.5
+margin_top = 35.4571
+margin_right = 113.5
+margin_bottom = 65.4571
+custom_fonts/font = SubResource( 1 )
+text = "PAUSE MENU"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SaveButton" type="Button" parent="MainPanel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -95.704
+margin_top = -18.0403
+margin_right = 95.2956
+margin_bottom = 12.9597
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="SaveLabel" type="Label" parent="MainPanel/SaveButton"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 2 )
+text = "Save"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="QuitButton" type="Button" parent="MainPanel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -93.704
+margin_top = 60.2562
+margin_right = 97.2956
+margin_bottom = 91.2562
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="QuitLabel" type="Label" parent="MainPanel/QuitButton"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 2 )
+text = "Quit"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SavePanel" type="Panel" parent="."]
+visible = false
+modulate = Color( 1, 1, 1, 0.866667 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -300.0
+margin_top = -186.0
+margin_right = 300.0
+margin_bottom = 186.0
+theme = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NameLabel" type="Label" parent="SavePanel"]
+margin_left = 18.0
+margin_top = 39.117
+margin_right = 584.0
+margin_bottom = 84.117
+custom_fonts/font = SubResource( 3 )
+text = "Enter Level Name"
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NameEdit" type="LineEdit" parent="SavePanel"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -283.0
+margin_top = 137.613
+margin_right = 284.0
+margin_bottom = 179.613
+custom_fonts/font = SubResource( 4 )
+text = "123456789012345678901234"
+align = 2
+max_length = 24
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SaveButton" type="Button" parent="SavePanel"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = 93.2968
+margin_top = -67.9996
+margin_right = 284.297
+margin_bottom = -36.9996
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="SaveLabel" type="Label" parent="SavePanel/SaveButton"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 2 )
+text = "Save"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BackButton" type="Button" parent="SavePanel"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -286.704
+margin_top = -66.4678
+margin_right = -95.704
+margin_bottom = -35.4678
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="BackLabel" type="Label" parent="SavePanel/BackButton"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 2 )
+text = "Back"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="SavePanel"]
+margin_left = 18.0
+margin_top = 243.174
+margin_right = 584.0
+margin_bottom = 288.174
+custom_fonts/font = SubResource( 3 )
+text = "Are you sure you want to save?"
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AutoSave" type="Panel" parent="."]
+visible = false
+modulate = Color( 1, 1, 1, 0.866667 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -300.0
+margin_top = -128.5
+margin_right = 300.0
+margin_bottom = 128.5
+theme = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SaveButton" type="Button" parent="AutoSave"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = 93.2968
+margin_top = -67.9996
+margin_right = 284.297
+margin_bottom = -36.9996
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="SaveLabel" type="Label" parent="AutoSave/SaveButton"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 2 )
+text = "Yes"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BackButton" type="Button" parent="AutoSave"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -286.704
+margin_top = -66.4678
+margin_right = -95.704
+margin_bottom = -35.4678
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="BackLabel" type="Label" parent="AutoSave/BackButton"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 2 )
+text = "No"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="AutoSave"]
+margin_left = 18.0
+margin_top = 41.1901
+margin_right = 584.0
+margin_bottom = 104.19
+custom_fonts/font = SubResource( 3 )
+text = "It's been awhile since you saved.
+Want to save now?"
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SaveSuccessful" type="Panel" parent="."]
+visible = false
+modulate = Color( 1, 1, 1, 0.866667 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -300.0
+margin_top = -200.0
+margin_right = 300.0
+margin_bottom = 200.0
+theme = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="SaveSuccessful"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -110.0
+margin_top = 39.8893
+margin_right = 110.0
+margin_bottom = 69.8893
+custom_fonts/font = SubResource( 5 )
+text = "Level Saved"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UploadButton" type="Button" parent="SaveSuccessful"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 58.9723
+margin_top = 145.0
+margin_right = 273.972
+margin_bottom = 176.0
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="UploadLabel" type="Label" parent="SaveSuccessful/UploadButton"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 2 )
+text = "Upload"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BackButton" type="Button" parent="SaveSuccessful"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -276.853
+margin_top = 145.0
+margin_right = -85.8534
+margin_bottom = 176.0
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="BackLabel" type="Label" parent="SaveSuccessful/BackButton"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 2 )
+text = "Back"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FontAwesomeLabel" type="Label" parent="SaveSuccessful/BackButton"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 6 )
+text = ""
+align = 1
+valign = 1
+script = ExtResource( 4 )
+size = 24
+icon = "hammer"
+
+[node name="Warning" type="Label" parent="SaveSuccessful"]
+margin_left = 19.108
+margin_top = 166.756
+margin_right = 587.108
+margin_bottom = 230.756
+custom_fonts/font = SubResource( 7 )
+text = "Would you like to upload your level?"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UploadFailed" type="Panel" parent="."]
+visible = false
+modulate = Color( 1, 1, 1, 0.866667 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -300.0
+margin_top = -200.0
+margin_right = 300.0
+margin_bottom = 200.0
+theme = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="UploadFailed"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -114.0
+margin_top = 51.6943
+margin_right = 114.0
+margin_bottom = 81.6943
+custom_fonts/font = SubResource( 5 )
+text = "Upload Failed"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UploadButton" type="Button" parent="UploadFailed"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 58.9723
+margin_top = 145.0
+margin_right = 273.972
+margin_bottom = 176.0
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="UploadLabel" type="Label" parent="UploadFailed/UploadButton"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 2 )
+text = "Upload"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BackButton" type="Button" parent="UploadFailed"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -276.853
+margin_top = 145.0
+margin_right = -85.8534
+margin_bottom = 176.0
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="BackLabel" type="Label" parent="UploadFailed/BackButton"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 2 )
+text = "Back"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FontAwesomeLabel" type="Label" parent="UploadFailed/BackButton"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 8 )
+text = ""
+align = 1
+valign = 1
+script = ExtResource( 4 )
+size = 24
+icon = "hammer"
+
+[node name="Warning" type="Label" parent="UploadFailed"]
+margin_left = 19.0
+margin_top = 167.0
+margin_right = 587.0
+margin_bottom = 207.0
+custom_fonts/font = SubResource( 7 )
+text = "Try again?"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UploadSuccessful" type="Panel" parent="."]
+visible = false
+modulate = Color( 1, 1, 1, 0.866667 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -371.5
+margin_top = -200.0
+margin_right = 371.5
+margin_bottom = 200.0
+theme = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="UploadSuccessful"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -114.5
+margin_top = 40.8113
+margin_right = 114.5
+margin_bottom = 70.8113
+custom_fonts/font = SubResource( 5 )
+text = "Level Cleared"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UploadButton" type="Button" parent="UploadSuccessful"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 58.9723
+margin_top = 145.0
+margin_right = 273.972
+margin_bottom = 176.0
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="UploadLabel" type="Label" parent="UploadSuccessful/UploadButton"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 2 )
+text = "Upload"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BackButton" type="Button" parent="UploadSuccessful"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -276.853
+margin_top = 145.0
+margin_right = -85.8534
+margin_bottom = 176.0
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="BackLabel" type="Label" parent="UploadSuccessful/BackButton"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 2 )
+text = "Cancel"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LevelName" type="Control" parent="UploadSuccessful"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -32.6489
+margin_top = -58.4962
+margin_right = -32.6489
+margin_bottom = -58.4962
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="UploadSuccessful/LevelName"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -352.0
+margin_top = -18.0
+margin_right = -100.0
+margin_bottom = 19.0
+custom_fonts/font = SubResource( 7 )
+text = "Level Name:"
+align = 2
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Value" type="Label" parent="UploadSuccessful/LevelName"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -126.868
+margin_top = -18.5
+margin_right = 358.132
+margin_bottom = 18.5
+custom_fonts/font = SubResource( 7 )
+text = "123456789012345678901234"
+align = 2
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ClearTime" type="Control" parent="UploadSuccessful"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -32.6489
+margin_top = 2.7207
+margin_right = -32.6489
+margin_bottom = 2.7207
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="UploadSuccessful/ClearTime"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -352.0
+margin_top = -18.0
+margin_right = -100.0
+margin_bottom = 19.0
+custom_fonts/font = SubResource( 7 )
+text = "Clear Time:"
+align = 2
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Value" type="Label" parent="UploadSuccessful/ClearTime"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -126.868
+margin_top = -18.5
+margin_right = 358.132
+margin_bottom = 18.5
+custom_fonts/font = SubResource( 7 )
+text = "00:00:00:000"
+align = 2
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ErrorLabel" type="Label" parent="UploadSuccessful"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -326.5
+margin_top = -165.0
+margin_right = 350.5
+margin_bottom = -71.0
+custom_fonts/font = SubResource( 9 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "ERROR MESSAGE IS SUPER ERROR"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="MainPanel/SaveButton" to="." method="_go_to_save"]
+[connection signal="pressed" from="MainPanel/QuitButton" to="." method="_quit"]
+[connection signal="text_changed" from="SavePanel/NameEdit" to="." method="name_changed"]
+[connection signal="pressed" from="SavePanel/SaveButton" to="." method="_save"]
+[connection signal="pressed" from="SavePanel/BackButton" to="." method="_go_to_main"]
+[connection signal="pressed" from="AutoSave/SaveButton" to="." method="_save" binds= [ false ]]
+[connection signal="pressed" from="AutoSave/BackButton" to="." method="close_menu"]
+[connection signal="pressed" from="SaveSuccessful/UploadButton" to="." method="_begin_upload"]
+[connection signal="pressed" from="SaveSuccessful/BackButton" to="." method="close_menu"]
+[connection signal="pressed" from="UploadFailed/UploadButton" to="." method="_begin_upload"]
+[connection signal="pressed" from="UploadFailed/BackButton" to="." method="_return_to_builder"]
+[connection signal="pressed" from="UploadSuccessful/UploadButton" to="." method="upload_level"]
+[connection signal="pressed" from="UploadSuccessful/BackButton" to="." method="_return_to_builder"]

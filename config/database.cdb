@@ -1,0 +1,340 @@
+{
+	"sheets": [
+		{
+			"name": "tile_list",
+			"columns": [
+				{
+					"typeStr": "0",
+					"name": "name"
+				},
+				{
+					"typeStr": "1",
+					"name": "description",
+					"display": null
+				},
+				{
+					"typeStr": "1",
+					"name": "thumbnailPath",
+					"display": null
+				},
+				{
+					"typeStr": "1",
+					"name": "resourcePath",
+					"display": null
+				},
+				{
+					"typeStr": "3",
+					"name": "layer"
+				},
+				{
+					"typeStr": "16",
+					"name": "defaultProperties",
+					"opt": true
+				}
+			],
+			"lines": [
+				{
+					"name": "night_city_ground",
+					"description": "Night City",
+					"thumbnailPath": "res://assets/Tiles/NightCity/ground.png",
+					"resourcePath": "res://src/Tiles/NightCity/NightCityGround.tscn",
+					"layer": 0
+				},
+				{
+					"name": "water",
+					"description": "Swim away captain!s",
+					"thumbnailPath": "res://assets/Tiles/WaterBG.png",
+					"resourcePath": "res://src/Tiles/Water/Water.tscn",
+					"layer": 0
+				},
+				{
+					"name": "slope_left",
+					"description": "Slope (left)",
+					"thumbnailPath": "res://assets/Tiles/slope.png",
+					"resourcePath": "res://src/Tiles/Slope/Slope.tscn",
+					"layer": 0
+				},
+				{
+					"name": "slope_right",
+					"description": "Slope (right)",
+					"thumbnailPath": "res://assets/Tiles/slopeRight.png",
+					"resourcePath": "res://src/Tiles/Slope/SlopeRight.tscn",
+					"layer": 0
+				},
+				{
+					"name": "bomb",
+					"description": "Bomb",
+					"thumbnailPath": "res://assets/Objects/Bomb/thumbnail.png",
+					"resourcePath": "res://src/Objects/Actors/Bomb/Bomb.tscn",
+					"layer": 1
+				},
+				{
+					"name": "soccer_ball",
+					"description": "Soccer Ball",
+					"thumbnailPath": "res://assets/Objects/SoccerBall.png",
+					"resourcePath": "res://src/Objects/Actors/SoccerBall/SoccerBall.tscn",
+					"layer": 1
+				},
+				{
+					"name": "chaser",
+					"description": "Chaser",
+					"thumbnailPath": "res://assets/Tiles/Red.png",
+					"resourcePath": "res://src/Objects/Actors/Chaser/Chaser.tscn",
+					"layer": 1
+				},
+				{
+					"name": "bouncy_boi",
+					"description": "Bouncy Boi",
+					"thumbnailPath": "res://assets/Tiles/Red.png",
+					"resourcePath": "res://src/Objects/Actors/BouncyBoi/BouncyBoi.tscn",
+					"layer": 1
+				},
+				{
+					"name": "wall_floor_spike",
+					"description": "Wall/Floor Spike",
+					"thumbnailPath": "res://assets/Objects/spike.png",
+					"resourcePath": "res://src/Objects/Actors/Spike/Spike.tscn",
+					"layer": 1
+				},
+				{
+					"name": "item_block",
+					"description": "Item Block",
+					"thumbnailPath": "res://assets/Objects/Block/icon.png",
+					"resourcePath": "res://src/Objects/Actors/ItemBlock/ItemBlock.tscn",
+					"layer": 1
+				},
+				{
+					"name": "invisible_block",
+					"description": "Invisible Block",
+					"thumbnailPath": "res://assets/Objects/Block/icon.png",
+					"resourcePath": "res://src/Objects/Actors/InvisibleBlock/InvisibleBlock.tscn",
+					"layer": 1,
+					"defaultProperties": {
+						"rotation": 0
+					}
+				},
+				{
+					"name": "redblue_changer",
+					"description": "On/Off Control Block",
+					"thumbnailPath": "res://assets/Objects/RedBlueBlocks/RedBlueBlock.png",
+					"resourcePath": "res://src/Objects/Actors/RedBlueChanger/RedBlueChanger.tscn",
+					"layer": 1,
+					"defaultProperties": {
+						"rotation": 0
+					}
+				},
+				{
+					"name": "red_block",
+					"description": "Off Block",
+					"thumbnailPath": "res://assets/Objects/RedBlueBlocks/RedBlock.png",
+					"resourcePath": "res://src/Objects/Actors/RedBlock/RedBlock.tscn",
+					"layer": 1,
+					"defaultProperties": {
+						"rotation": 0
+					}
+				},
+				{
+					"name": "blue_block",
+					"description": "On Block",
+					"thumbnailPath": "res://assets/Objects/RedBlueBlocks/BlueBlock.png",
+					"resourcePath": "res://src/Objects/Actors/BlueBlock/BlueBlock.tscn",
+					"layer": 1,
+					"defaultProperties": {
+						"rotation": 0
+					}
+				},
+				{
+					"name": "spawn_location",
+					"description": "Spawn Location",
+					"thumbnailPath": "res://assets/Tiles/spawnIcon.png",
+					"resourcePath": "res://src/Tiles/SpawnLocation.tscn",
+					"layer": 2
+				},
+				{
+					"name": "end_location",
+					"description": "End Level",
+					"thumbnailPath": "res://assets/Objects/Cake.png",
+					"resourcePath": "res://src/Objects/Actors/Cake/Cake.tscn",
+					"layer": 2
+				}
+			],
+			"separators": [],
+			"props": {}
+		},
+		{
+			"name": "pallettes",
+			"columns": [
+				{
+					"typeStr": "0",
+					"name": "name",
+					"display": null
+				},
+				{
+					"typeStr": "11",
+					"name": "color",
+					"display": null
+				},
+				{
+					"typeStr": "8",
+					"name": "tiles"
+				}
+			],
+			"lines": [
+				{
+					"name": "Environment",
+					"color": 11000195,
+					"tiles": [
+						{
+							"tile_name": "night_city_ground"
+						},
+						{
+							"tile_name": "water"
+						},
+						{
+							"tile_name": "slope_left"
+						},
+						{
+							"tile_name": "slope_right"
+						}
+					]
+				},
+				{
+					"name": "Enemies",
+					"color": 15236477,
+					"tiles": [
+						{
+							"tile_name": "bomb"
+						},
+						{
+							"tile_name": "soccer_ball"
+						},
+						{
+							"tile_name": "chaser"
+						},
+						{
+							"tile_name": "bouncy_boi"
+						}
+					]
+				},
+				{
+					"name": "Stage_Hazards",
+					"color": 0,
+					"tiles": [
+						{
+							"tile_name": "wall_floor_spike"
+						},
+						{
+							"tile_name": "item_block"
+						},
+						{
+							"tile_name": "invisible_block"
+						},
+						{
+							"tile_name": "redblue_changer"
+						},
+						{
+							"tile_name": "red_block"
+						},
+						{
+							"tile_name": "blue_block"
+						}
+					]
+				},
+				{
+					"name": "Admin",
+					"color": 16764506,
+					"tiles": [
+						{
+							"tile_name": "spawn_location"
+						},
+						{
+							"tile_name": "end_location"
+						}
+					]
+				}
+			],
+			"separators": [],
+			"props": {}
+		},
+		{
+			"name": "pallettes@tiles",
+			"props": {
+				"hide": true
+			},
+			"separators": [],
+			"lines": [],
+			"columns": [
+				{
+					"typeStr": "1",
+					"name": "tile_name",
+					"display": null
+				}
+			]
+		},
+		{
+			"name": "customization_items",
+			"columns": [
+				{
+					"typeStr": "0",
+					"name": "name"
+				},
+				{
+					"typeStr": "1",
+					"name": "friendly_name",
+					"display": null
+				},
+				{
+					"typeStr": "8",
+					"name": "slot_indices",
+					"display": null
+				},
+				{
+					"typeStr": "5:HAT,EYES,NOSE,MOUTH,FACE,SHIRT,PANTS,SHOES,HANDS,HELD",
+					"name": "item_type"
+				}
+			],
+			"lines": [
+				{
+					"name": "hat_ozzadar",
+					"friendly_name": "Ozzadar's Hat",
+					"slot_indices": [],
+					"item_type": 0
+				},
+				{
+					"name": "shirt_ozzadar",
+					"friendly_name": "Ozzadar's Shirt",
+					"slot_indices": [],
+					"item_type": 5
+				}
+			],
+			"separators": [],
+			"props": {}
+		},
+		{
+			"name": "customization_items@slot_indices",
+			"props": {
+				"hide": true
+			},
+			"separators": [],
+			"lines": [],
+			"columns": [
+				{
+					"typeStr": "1",
+					"name": "armature_name",
+					"display": null
+				},
+				{
+					"typeStr": "3",
+					"name": "index"
+				},
+				{
+					"typeStr": "1",
+					"name": "slot_name",
+					"display": null
+				}
+			]
+		}
+	],
+	"customTypes": [],
+	"compress": false
+}

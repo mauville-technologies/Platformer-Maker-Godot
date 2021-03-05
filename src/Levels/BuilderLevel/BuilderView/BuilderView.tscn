@@ -1,0 +1,167 @@
+[gd_scene load_steps=20 format=2]
+
+[ext_resource path="res://src/Levels/BuilderLevel/BuilderView/BuilderView.gd" type="Script" id=1]
+[ext_resource path="res://assets/GUI/cursor.png" type="Texture" id=2]
+[ext_resource path="res://src/Levels/BuilderLevel/BuilderView/BuilderViewInputHandler.gd" type="Script" id=3]
+[ext_resource path="res://src/Levels/BuilderLevel/BuilderView/Pallette/Pallette.tscn" type="PackedScene" id=4]
+[ext_resource path="res://addons/FontAwesome/fontawesome-webfont.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://addons/FontAwesome/FontAwesome.gd" type="Script" id=6]
+[ext_resource path="res://assets/GUI/Builder/progress-circle-black.png" type="Texture" id=7]
+[ext_resource path="res://assets/GUI/Builder/progress-circle-white.png" type="Texture" id=8]
+[ext_resource path="res://fonts/neuropol x rg.ttf" type="DynamicFontData" id=9]
+[ext_resource path="res://src/Levels/BuilderLevel/BuilderView/BuilderControls.tscn" type="PackedScene" id=10]
+[ext_resource path="res://src/Components/ControlButton.gd" type="Script" id=11]
+[ext_resource path="res://assets/Controls/Keyboard & Mouse/Dark/Keyboard_Black_H.png" type="Texture" id=12]
+[ext_resource path="res://fonts/Accuratist/Accuratist.otf" type="DynamicFontData" id=13]
+[ext_resource path="res://assets/Controls/Xbox One/XboxOne_Windows.png" type="Texture" id=14]
+[ext_resource path="res://src/Levels/BuilderLevel/BuilderView/PropertiesPanel/PropertiesPanel.tscn" type="PackedScene" id=15]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 960, 540 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 64
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 36
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 9 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 64
+font_data = ExtResource( 13 )
+
+[node name="BuilderView" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="BuilderViewInputHandler" type="Area2D" parent="."]
+z_index = 10
+script = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BuilderViewInputHandler"]
+position = Vector2( 960, 539.337 )
+shape = SubResource( 1 )
+
+[node name="Camera2D" type="Camera2D" parent="BuilderViewInputHandler"]
+position = Vector2( 960, 540 )
+current = true
+
+[node name="UILayer" type="CanvasLayer" parent="BuilderViewInputHandler"]
+process_priority = -120
+
+[node name="PropertiesPanel" parent="BuilderViewInputHandler/UILayer" instance=ExtResource( 15 )]
+margin_right = -13.0001
+
+[node name="Play Button" type="Button" parent="BuilderViewInputHandler/UILayer"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -140.588
+margin_top = 12.5877
+margin_right = -12.5876
+margin_bottom = 140.588
+focus_mode = 0
+enabled_focus_mode = 0
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="FontAwesomeLabel" type="Label" parent="BuilderViewInputHandler/UILayer/Play Button"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 5 )
+text = ""
+align = 1
+valign = 1
+script = ExtResource( 6 )
+size = 64
+icon = "play"
+
+[node name="TestProgressBar" type="TextureProgress" parent="BuilderViewInputHandler/UILayer"]
+margin_left = 1750.99
+margin_top = 104.783
+margin_right = 1878.99
+margin_bottom = 232.783
+rect_scale = Vector2( 0.5, 0.5 )
+texture_under = ExtResource( 7 )
+texture_progress = ExtResource( 8 )
+fill_mode = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="BuilderViewInputHandler/UILayer/TestProgressBar"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -242.0
+margin_top = -1.0
+margin_right = 243.0
+margin_bottom = 92.0
+custom_fonts/font = SubResource( 3 )
+text = "Hold to start from beginning"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Pallette" parent="BuilderViewInputHandler/UILayer" instance=ExtResource( 4 )]
+
+[node name="Cursor" type="Node2D" parent="BuilderViewInputHandler/UILayer"]
+z_index = 2000
+z_as_relative = false
+
+[node name="sprite" type="Sprite" parent="BuilderViewInputHandler/UILayer/Cursor"]
+position = Vector2( 11.1734, 12.5701 )
+z_index = 4096
+texture = ExtResource( 2 )
+
+[node name="ControlsHelp" type="HBoxContainer" parent="BuilderViewInputHandler/UILayer"]
+modulate = Color( 1, 1, 1, 0.376471 )
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_top = -52.7448
+margin_right = 409.0
+margin_bottom = 47.2552
+rect_scale = Vector2( 0.5, 0.5 )
+size_flags_horizontal = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ControlButton" type="TextureRect" parent="BuilderViewInputHandler/UILayer/ControlsHelp"]
+margin_right = 100.0
+margin_bottom = 100.0
+texture = ExtResource( 14 )
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+_joypad_texture = ExtResource( 14 )
+_keyboard_texture = ExtResource( 12 )
+
+[node name="Controls" type="Label" parent="BuilderViewInputHandler/UILayer/ControlsHelp"]
+margin_left = 104.0
+margin_right = 447.0
+margin_bottom = 100.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+custom_fonts/font = SubResource( 4 )
+text = "View Controls"
+align = 1
+valign = 1
+
+[node name="UITween" type="Tween" parent="BuilderViewInputHandler/UILayer"]
+
+[node name="BuilderControls" parent="." instance=ExtResource( 10 )]
+layer = 3
+[connection signal="help_changed" from="BuilderViewInputHandler" to="." method="_help_changed"]
+[connection signal="tilemap_clicked" from="BuilderViewInputHandler" to="." method="_on_tilemap_clicked"]
+[connection signal="tilemap_middle_clicked" from="BuilderViewInputHandler" to="." method="_on_tilemap_middle_clicked"]
+[connection signal="tilemap_right_clicked" from="BuilderViewInputHandler" to="." method="_on_tilemap_right_clicked"]
+[connection signal="pressed" from="BuilderViewInputHandler/UILayer/Play Button" to="." method="_go_to_testing" binds= [ true ]]

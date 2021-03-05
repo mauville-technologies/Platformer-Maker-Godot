@@ -1,0 +1,132 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://src/Components/WheelController/WheelController.gd" type="Script" id=1]
+[ext_resource path="res://addons/FontAwesome/fontawesome-webfont.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://addons/FontAwesome/FontAwesome.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 64
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 64
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 64
+font_data = ExtResource( 2 )
+
+[node name="WheelController" type="Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="0" type="Node2D" parent="."]
+
+[node name="1" type="Node2D" parent="."]
+position = Vector2( 469.474, 0 )
+
+[node name="2" type="Node2D" parent="."]
+position = Vector2( 851.286, 0 )
+
+[node name="3" type="Node2D" parent="."]
+position = Vector2( 1499.98, 0 )
+
+[node name="-1" type="Node2D" parent="."]
+position = Vector2( -440.253, 0 )
+
+[node name="-2" type="Node2D" parent="."]
+position = Vector2( -818.17, 0 )
+
+[node name="-3" type="Node2D" parent="."]
+position = Vector2( -1377.25, 0 )
+
+[node name="CanvasLayer" type="Control" parent="."]
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Previous" type="Button" parent="CanvasLayer"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = -775.328
+margin_top = 265.006
+margin_right = -519.328
+margin_bottom = 329.006
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="FontAwesomeLabel" type="Label" parent="CanvasLayer/Previous"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 1 )
+text = ""
+align = 1
+valign = 1
+script = ExtResource( 3 )
+size = 64
+icon = "arrow-left"
+
+[node name="Exit button" type="Button" parent="CanvasLayer"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = -108.781
+margin_top = 265.006
+margin_right = 147.219
+margin_bottom = 329.006
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="FontAwesomeLabel" type="Label" parent="CanvasLayer/Exit button"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 2 )
+text = ""
+align = 1
+valign = 1
+script = ExtResource( 3 )
+size = 64
+icon = "close"
+
+[node name="Next" type="Button" parent="CanvasLayer"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 531.702
+margin_top = 265.006
+margin_right = 787.702
+margin_bottom = 329.006
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="FontAwesomeLabel" type="Label" parent="CanvasLayer/Next"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 3 )
+text = ""
+align = 1
+valign = 1
+script = ExtResource( 3 )
+size = 64
+icon = "arrow-right"
+[connection signal="pressed" from="CanvasLayer/Previous" to="." method="scroll_left"]
+[connection signal="pressed" from="CanvasLayer/Exit button" to="." method="_exit_selector"]
+[connection signal="pressed" from="CanvasLayer/Next" to="." method="scroll_right"]

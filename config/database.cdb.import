@@ -1,0 +1,14 @@
+[remap]
+
+importer="castledb-godot.importer"
+type="Script"
+path="res://.import/database.cdb-abccb47a52bc27883aa9098834d331b5.gd"
+
+[deps]
+
+source_file="res://config/database.cdb"
+dest_files=[ "res://.import/database.cdb-abccb47a52bc27883aa9098834d331b5.gd" ]
+
+[params]
+
+default=false

@@ -1,0 +1,728 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/Character/avatar-placeholder.jpg" type="Texture" id=1]
+[ext_resource path="res://src/Components/PlayerInfoComponent/PlayerInfoComponent.gd" type="Script" id=2]
+
+[node name="PlayerInfoComponent" type="Panel"]
+margin_right = 1033.0
+margin_bottom = 641.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 32.0
+margin_top = 13.4825
+margin_right = -32.0
+margin_bottom = -18.5175
+custom_constants/separation = 16
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UserHeader" type="Label" parent="VBoxContainer"]
+margin_right = 969.0
+margin_bottom = 14.0
+text = "USER INFORMATION"
+align = 1
+autowrap = true
+
+[node name="UserContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 30.0
+margin_right = 969.0
+margin_bottom = 286.0
+custom_constants/separation = 32
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Avatar" type="TextureRect" parent="VBoxContainer/UserContainer"]
+margin_right = 256.0
+margin_bottom = 256.0
+rect_min_size = Vector2( 256, 256 )
+texture = ExtResource( 1 )
+expand = true
+stretch_mode = 1
+
+[node name="InformationPanel" type="VBoxContainer" parent="VBoxContainer/UserContainer"]
+margin_left = 288.0
+margin_right = 969.0
+margin_bottom = 256.0
+size_flags_horizontal = 3
+
+[node name="UsernameContainer" type="HBoxContainer" parent="VBoxContainer/UserContainer/InformationPanel"]
+margin_right = 681.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 0, 32 )
+custom_constants/separation = 32
+
+[node name="Label" type="Label" parent="VBoxContainer/UserContainer/InformationPanel/UsernameContainer"]
+margin_top = 9.0
+margin_right = 128.0
+margin_bottom = 23.0
+rect_min_size = Vector2( 128, 0 )
+text = "Username:"
+align = 2
+
+[node name="Username" type="Label" parent="VBoxContainer/UserContainer/InformationPanel/UsernameContainer"]
+margin_left = 160.0
+margin_top = 9.0
+margin_right = 681.0
+margin_bottom = 23.0
+size_flags_horizontal = 3
+text = "Ozzadar"
+
+[node name="UsernameContainer2" type="HBoxContainer" parent="VBoxContainer/UserContainer/InformationPanel"]
+margin_top = 36.0
+margin_right = 681.0
+margin_bottom = 68.0
+rect_min_size = Vector2( 0, 32 )
+custom_constants/separation = 32
+
+[node name="Label" type="Label" parent="VBoxContainer/UserContainer/InformationPanel/UsernameContainer2"]
+margin_top = 9.0
+margin_right = 128.0
+margin_bottom = 23.0
+rect_min_size = Vector2( 128, 0 )
+text = "Username:"
+align = 2
+
+[node name="Username" type="Label" parent="VBoxContainer/UserContainer/InformationPanel/UsernameContainer2"]
+margin_left = 160.0
+margin_top = 9.0
+margin_right = 681.0
+margin_bottom = 23.0
+size_flags_horizontal = 3
+text = "Ozzadar"
+
+[node name="UsernameContainer3" type="HBoxContainer" parent="VBoxContainer/UserContainer/InformationPanel"]
+margin_top = 72.0
+margin_right = 681.0
+margin_bottom = 104.0
+rect_min_size = Vector2( 0, 32 )
+custom_constants/separation = 32
+
+[node name="Label" type="Label" parent="VBoxContainer/UserContainer/InformationPanel/UsernameContainer3"]
+margin_top = 9.0
+margin_right = 128.0
+margin_bottom = 23.0
+rect_min_size = Vector2( 128, 0 )
+text = "Username:"
+align = 2
+
+[node name="Username" type="Label" parent="VBoxContainer/UserContainer/InformationPanel/UsernameContainer3"]
+margin_left = 160.0
+margin_top = 9.0
+margin_right = 681.0
+margin_bottom = 23.0
+size_flags_horizontal = 3
+text = "Ozzadar"
+
+[node name="UsernameContainer4" type="HBoxContainer" parent="VBoxContainer/UserContainer/InformationPanel"]
+margin_top = 108.0
+margin_right = 681.0
+margin_bottom = 140.0
+rect_min_size = Vector2( 0, 32 )
+custom_constants/separation = 32
+
+[node name="Label" type="Label" parent="VBoxContainer/UserContainer/InformationPanel/UsernameContainer4"]
+margin_top = 9.0
+margin_right = 128.0
+margin_bottom = 23.0
+rect_min_size = Vector2( 128, 0 )
+text = "Username:"
+align = 2
+
+[node name="Username" type="Label" parent="VBoxContainer/UserContainer/InformationPanel/UsernameContainer4"]
+margin_left = 160.0
+margin_top = 9.0
+margin_right = 681.0
+margin_bottom = 23.0
+size_flags_horizontal = 3
+text = "Ozzadar"
+
+[node name="UsernameContainer5" type="HBoxContainer" parent="VBoxContainer/UserContainer/InformationPanel"]
+margin_top = 144.0
+margin_right = 681.0
+margin_bottom = 176.0
+rect_min_size = Vector2( 0, 32 )
+custom_constants/separation = 32
+
+[node name="Label" type="Label" parent="VBoxContainer/UserContainer/InformationPanel/UsernameContainer5"]
+margin_top = 9.0
+margin_right = 128.0
+margin_bottom = 23.0
+rect_min_size = Vector2( 128, 0 )
+text = "Username:"
+align = 2
+
+[node name="Username" type="Label" parent="VBoxContainer/UserContainer/InformationPanel/UsernameContainer5"]
+margin_left = 160.0
+margin_top = 9.0
+margin_right = 681.0
+margin_bottom = 23.0
+size_flags_horizontal = 3
+text = "Ozzadar"
+
+[node name="UsernameContainer6" type="HBoxContainer" parent="VBoxContainer/UserContainer/InformationPanel"]
+margin_top = 180.0
+margin_right = 681.0
+margin_bottom = 212.0
+rect_min_size = Vector2( 0, 32 )
+custom_constants/separation = 32
+
+[node name="Label" type="Label" parent="VBoxContainer/UserContainer/InformationPanel/UsernameContainer6"]
+margin_top = 9.0
+margin_right = 128.0
+margin_bottom = 23.0
+rect_min_size = Vector2( 128, 0 )
+text = "Username:"
+align = 2
+
+[node name="Username" type="Label" parent="VBoxContainer/UserContainer/InformationPanel/UsernameContainer6"]
+margin_left = 160.0
+margin_top = 9.0
+margin_right = 681.0
+margin_bottom = 23.0
+size_flags_horizontal = 3
+text = "Ozzadar"
+
+[node name="UsernameContainer7" type="HBoxContainer" parent="VBoxContainer/UserContainer/InformationPanel"]
+margin_top = 216.0
+margin_right = 681.0
+margin_bottom = 248.0
+rect_min_size = Vector2( 0, 32 )
+custom_constants/separation = 32
+
+[node name="Label" type="Label" parent="VBoxContainer/UserContainer/InformationPanel/UsernameContainer7"]
+margin_top = 9.0
+margin_right = 128.0
+margin_bottom = 23.0
+rect_min_size = Vector2( 128, 0 )
+text = "Username:"
+align = 2
+
+[node name="Username" type="Label" parent="VBoxContainer/UserContainer/InformationPanel/UsernameContainer7"]
+margin_left = 160.0
+margin_top = 9.0
+margin_right = 681.0
+margin_bottom = 23.0
+size_flags_horizontal = 3
+text = "Ozzadar"
+
+[node name="StatsHeader" type="Label" parent="VBoxContainer"]
+margin_top = 302.0
+margin_right = 969.0
+margin_bottom = 316.0
+text = "STATS"
+align = 1
+autowrap = true
+
+[node name="UserContainer2" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 332.0
+margin_right = 969.0
+margin_bottom = 580.0
+custom_constants/separation = 32
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="InformationPanel" type="VBoxContainer" parent="VBoxContainer/UserContainer2"]
+margin_right = 301.0
+margin_bottom = 248.0
+size_flags_horizontal = 3
+
+[node name="UsernameContainer" type="HBoxContainer" parent="VBoxContainer/UserContainer2/InformationPanel"]
+margin_right = 301.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 0, 32 )
+custom_constants/separation = 32
+
+[node name="Label" type="Label" parent="VBoxContainer/UserContainer2/InformationPanel/UsernameContainer"]
+margin_top = 9.0
+margin_right = 128.0
+margin_bottom = 23.0
+rect_min_size = Vector2( 128, 0 )
+text = "Username:"
+align = 2
+
+[node name="Username" type="Label" parent="VBoxContainer/UserContainer2/InformationPanel/UsernameContainer"]
+margin_left = 160.0
+margin_top = 9.0
+margin_right = 301.0
+margin_bottom = 23.0
+size_flags_horizontal = 3
+text = "Ozzadar"
+
+[node name="UsernameContainer2" type="HBoxContainer" parent="VBoxContainer/UserContainer2/InformationPanel"]
+margin_top = 36.0
+margin_right = 301.0
+margin_bottom = 68.0
+rect_min_size = Vector2( 0, 32 )
+custom_constants/separation = 32
+
+[node name="Label" type="Label" parent="VBoxContainer/UserContainer2/InformationPanel/UsernameContainer2"]
+margin_top = 9.0
+margin_right = 128.0
+margin_bottom = 23.0
+rect_min_size = Vector2( 128, 0 )
+text = "Username:"
+align = 2
+
+[node name="Username" type="Label" parent="VBoxContainer/UserContainer2/InformationPanel/UsernameContainer2"]
+margin_left = 160.0
+margin_top = 9.0
+margin_right = 301.0
+margin_bottom = 23.0
+size_flags_horizontal = 3
+text = "Ozzadar"
+
+[node name="UsernameContainer3" type="HBoxContainer" parent="VBoxContainer/UserContainer2/InformationPanel"]
+margin_top = 72.0
+margin_right = 301.0
+margin_bottom = 104.0
+rect_min_size = Vector2( 0, 32 )
+custom_constants/separation = 32
+
+[node name="Label" type="Label" parent="VBoxContainer/UserContainer2/InformationPanel/UsernameContainer3"]
+margin_top = 9.0
+margin_right = 128.0
+margin_bottom = 23.0
+rect_min_size = Vector2( 128, 0 )
+text = "Username:"
+align = 2
+
+[node name="Username" type="Label" parent="VBoxContainer/UserContainer2/InformationPanel/UsernameContainer3"]
+margin_left = 160.0
+margin_top = 9.0
+margin_right = 301.0
+margin_bottom = 23.0
+size_flags_horizontal = 3
+text = "Ozzadar"
+
+[node name="UsernameContainer4" type="HBoxContainer" parent="VBoxContainer/UserContainer2/InformationPanel"]
+margin_top = 108.0
+margin_right = 301.0
+margin_bottom = 140.0
+rect_min_size = Vector2( 0, 32 )
+custom_constants/separation = 32
+
+[node name="Label" type="Label" parent="VBoxContainer/UserContainer2/InformationPanel/UsernameContainer4"]
+margin_top = 9.0
+margin_right = 128.0
+margin_bottom = 23.0
+rect_min_size = Vector2( 128, 0 )
+text = "Username:"
+align = 2
+
+[node name="Username" type="Label" parent="VBoxContainer/UserContainer2/InformationPanel/UsernameContainer4"]
+margin_left = 160.0
+margin_top = 9.0
+margin_right = 301.0
+margin_bottom = 23.0
+size_flags_horizontal = 3
+text = "Ozzadar"
+
+[node name="UsernameContainer5" type="HBoxContainer" parent="VBoxContainer/UserContainer2/InformationPanel"]
+margin_top = 144.0
+margin_right = 301.0
+margin_bottom = 176.0
+rect_min_size = Vector2( 0, 32 )
+custom_constants/separation = 32
+
+[node name="Label" type="Label" parent="VBoxContainer/UserContainer2/InformationPanel/UsernameContainer5"]
+margin_top = 9.0
+margin_right = 128.0
+margin_bottom = 23.0
+rect_min_size = Vector2( 128, 0 )
+text = "Username:"
+align = 2
+
+[node name="Username" type="Label" parent="VBoxContainer/UserContainer2/InformationPanel/UsernameContainer5"]
+margin_left = 160.0
+margin_top = 9.0
+margin_right = 301.0
+margin_bottom = 23.0
+size_flags_horizontal = 3
+text = "Ozzadar"
+
+[node name="UsernameContainer6" type="HBoxContainer" parent="VBoxContainer/UserContainer2/InformationPanel"]
+margin_top = 180.0
+margin_right = 301.0
+margin_bottom = 212.0
+rect_min_size = Vector2( 0, 32 )
+custom_constants/separation = 32
+
+[node name="Label" type="Label" parent="VBoxContainer/UserContainer2/InformationPanel/UsernameContainer6"]
+margin_top = 9.0
+margin_right = 128.0
+margin_bottom = 23.0
+rect_min_size = Vector2( 128, 0 )
+text = "Username:"
+align = 2
+
+[node name="Username" type="Label" parent="VBoxContainer/UserContainer2/InformationPanel/UsernameContainer6"]
+margin_left = 160.0
+margin_top = 9.0
+margin_right = 301.0
+margin_bottom = 23.0
+size_flags_horizontal = 3
+text = "Ozzadar"
+
+[node name="UsernameContainer7" type="HBoxContainer" parent="VBoxContainer/UserContainer2/InformationPanel"]
+margin_top = 216.0
+margin_right = 301.0
+margin_bottom = 248.0
+rect_min_size = Vector2( 0, 32 )
+custom_constants/separation = 32
+
+[node name="Label" type="Label" parent="VBoxContainer/UserContainer2/InformationPanel/UsernameContainer7"]
+margin_top = 9.0
+margin_right = 128.0
+margin_bottom = 23.0
+rect_min_size = Vector2( 128, 0 )
+text = "Username:"
+align = 2
+
+[node name="Username" type="Label" parent="VBoxContainer/UserContainer2/InformationPanel/UsernameContainer7"]
+margin_left = 160.0
+margin_top = 9.0
+margin_right = 301.0
+margin_bottom = 23.0
+size_flags_horizontal = 3
+text = "Ozzadar"
+
+[node name="InformationPanel2" type="VBoxContainer" parent="VBoxContainer/UserContainer2"]
+margin_left = 333.0
+margin_right = 634.0
+margin_bottom = 248.0
+size_flags_horizontal = 3
+
+[node name="UsernameContainer" type="HBoxContainer" parent="VBoxContainer/UserContainer2/InformationPanel2"]
+margin_right = 301.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 0, 32 )
+custom_constants/separation = 32
+
+[node name="Label" type="Label" parent="VBoxContainer/UserContainer2/InformationPanel2/UsernameContainer"]
+margin_top = 9.0
+margin_right = 128.0
+margin_bottom = 23.0
+rect_min_size = Vector2( 128, 0 )
+text = "Username:"
+align = 2
+
+[node name="Username" type="Label" parent="VBoxContainer/UserContainer2/InformationPanel2/UsernameContainer"]
+margin_left = 160.0
+margin_top = 9.0
+margin_right = 301.0
+margin_bottom = 23.0
+size_flags_horizontal = 3
+text = "Ozzadar"
+
+[node name="UsernameContainer2" type="HBoxContainer" parent="VBoxContainer/UserContainer2/InformationPanel2"]
+margin_top = 36.0
+margin_right = 301.0
+margin_bottom = 68.0
+rect_min_size = Vector2( 0, 32 )
+custom_constants/separation = 32
+
+[node name="Label" type="Label" parent="VBoxContainer/UserContainer2/InformationPanel2/UsernameContainer2"]
+margin_top = 9.0
+margin_right = 128.0
+margin_bottom = 23.0
+rect_min_size = Vector2( 128, 0 )
+text = "Username:"
+align = 2
+
+[node name="Username" type="Label" parent="VBoxContainer/UserContainer2/InformationPanel2/UsernameContainer2"]
+margin_left = 160.0
+margin_top = 9.0
+margin_right = 301.0
+margin_bottom = 23.0
+size_flags_horizontal = 3
+text = "Ozzadar"
+
+[node name="UsernameContainer3" type="HBoxContainer" parent="VBoxContainer/UserContainer2/InformationPanel2"]
+margin_top = 72.0
+margin_right = 301.0
+margin_bottom = 104.0
+rect_min_size = Vector2( 0, 32 )
+custom_constants/separation = 32
+
+[node name="Label" type="Label" parent="VBoxContainer/UserContainer2/InformationPanel2/UsernameContainer3"]
+margin_top = 9.0
+margin_right = 128.0
+margin_bottom = 23.0
+rect_min_size = Vector2( 128, 0 )
+text = "Username:"
+align = 2
+
+[node name="Username" type="Label" parent="VBoxContainer/UserContainer2/InformationPanel2/UsernameContainer3"]
+margin_left = 160.0
+margin_top = 9.0
+margin_right = 301.0
+margin_bottom = 23.0
+size_flags_horizontal = 3
+text = "Ozzadar"
+
+[node name="UsernameContainer4" type="HBoxContainer" parent="VBoxContainer/UserContainer2/InformationPanel2"]
+margin_top = 108.0
+margin_right = 301.0
+margin_bottom = 140.0
+rect_min_size = Vector2( 0, 32 )
+custom_constants/separation = 32
+
+[node name="Label" type="Label" parent="VBoxContainer/UserContainer2/InformationPanel2/UsernameContainer4"]
+margin_top = 9.0
+margin_right = 128.0
+margin_bottom = 23.0
+rect_min_size = Vector2( 128, 0 )
+text = "Username:"
+align = 2
+
+[node name="Username" type="Label" parent="VBoxContainer/UserContainer2/InformationPanel2/UsernameContainer4"]
+margin_left = 160.0
+margin_top = 9.0
+margin_right = 301.0
+margin_bottom = 23.0
+size_flags_horizontal = 3
+text = "Ozzadar"
+
+[node name="UsernameContainer5" type="HBoxContainer" parent="VBoxContainer/UserContainer2/InformationPanel2"]
+margin_top = 144.0
+margin_right = 301.0
+margin_bottom = 176.0
+rect_min_size = Vector2( 0, 32 )
+custom_constants/separation = 32
+
+[node name="Label" type="Label" parent="VBoxContainer/UserContainer2/InformationPanel2/UsernameContainer5"]
+margin_top = 9.0
+margin_right = 128.0
+margin_bottom = 23.0
+rect_min_size = Vector2( 128, 0 )
+text = "Username:"
+align = 2
+
+[node name="Username" type="Label" parent="VBoxContainer/UserContainer2/InformationPanel2/UsernameContainer5"]
+margin_left = 160.0
+margin_top = 9.0
+margin_right = 301.0
+margin_bottom = 23.0
+size_flags_horizontal = 3
+text = "Ozzadar"
+
+[node name="UsernameContainer6" type="HBoxContainer" parent="VBoxContainer/UserContainer2/InformationPanel2"]
+margin_top = 180.0
+margin_right = 301.0
+margin_bottom = 212.0
+rect_min_size = Vector2( 0, 32 )
+custom_constants/separation = 32
+
+[node name="Label" type="Label" parent="VBoxContainer/UserContainer2/InformationPanel2/UsernameContainer6"]
+margin_top = 9.0
+margin_right = 128.0
+margin_bottom = 23.0
+rect_min_size = Vector2( 128, 0 )
+text = "Username:"
+align = 2
+
+[node name="Username" type="Label" parent="VBoxContainer/UserContainer2/InformationPanel2/UsernameContainer6"]
+margin_left = 160.0
+margin_top = 9.0
+margin_right = 301.0
+margin_bottom = 23.0
+size_flags_horizontal = 3
+text = "Ozzadar"
+
+[node name="UsernameContainer7" type="HBoxContainer" parent="VBoxContainer/UserContainer2/InformationPanel2"]
+margin_top = 216.0
+margin_right = 301.0
+margin_bottom = 248.0
+rect_min_size = Vector2( 0, 32 )
+custom_constants/separation = 32
+
+[node name="Label" type="Label" parent="VBoxContainer/UserContainer2/InformationPanel2/UsernameContainer7"]
+margin_top = 9.0
+margin_right = 128.0
+margin_bottom = 23.0
+rect_min_size = Vector2( 128, 0 )
+text = "Username:"
+align = 2
+
+[node name="Username" type="Label" parent="VBoxContainer/UserContainer2/InformationPanel2/UsernameContainer7"]
+margin_left = 160.0
+margin_top = 9.0
+margin_right = 301.0
+margin_bottom = 23.0
+size_flags_horizontal = 3
+text = "Ozzadar"
+
+[node name="InformationPanel3" type="VBoxContainer" parent="VBoxContainer/UserContainer2"]
+margin_left = 666.0
+margin_right = 969.0
+margin_bottom = 248.0
+size_flags_horizontal = 3
+
+[node name="UsernameContainer" type="HBoxContainer" parent="VBoxContainer/UserContainer2/InformationPanel3"]
+margin_right = 303.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 0, 32 )
+custom_constants/separation = 32
+
+[node name="Label" type="Label" parent="VBoxContainer/UserContainer2/InformationPanel3/UsernameContainer"]
+margin_top = 9.0
+margin_right = 128.0
+margin_bottom = 23.0
+rect_min_size = Vector2( 128, 0 )
+text = "Username:"
+align = 2
+
+[node name="Username" type="Label" parent="VBoxContainer/UserContainer2/InformationPanel3/UsernameContainer"]
+margin_left = 160.0
+margin_top = 9.0
+margin_right = 303.0
+margin_bottom = 23.0
+size_flags_horizontal = 3
+text = "Ozzadar"
+
+[node name="UsernameContainer2" type="HBoxContainer" parent="VBoxContainer/UserContainer2/InformationPanel3"]
+margin_top = 36.0
+margin_right = 303.0
+margin_bottom = 68.0
+rect_min_size = Vector2( 0, 32 )
+custom_constants/separation = 32
+
+[node name="Label" type="Label" parent="VBoxContainer/UserContainer2/InformationPanel3/UsernameContainer2"]
+margin_top = 9.0
+margin_right = 128.0
+margin_bottom = 23.0
+rect_min_size = Vector2( 128, 0 )
+text = "Username:"
+align = 2
+
+[node name="Username" type="Label" parent="VBoxContainer/UserContainer2/InformationPanel3/UsernameContainer2"]
+margin_left = 160.0
+margin_top = 9.0
+margin_right = 303.0
+margin_bottom = 23.0
+size_flags_horizontal = 3
+text = "Ozzadar"
+
+[node name="UsernameContainer3" type="HBoxContainer" parent="VBoxContainer/UserContainer2/InformationPanel3"]
+margin_top = 72.0
+margin_right = 303.0
+margin_bottom = 104.0
+rect_min_size = Vector2( 0, 32 )
+custom_constants/separation = 32
+
+[node name="Label" type="Label" parent="VBoxContainer/UserContainer2/InformationPanel3/UsernameContainer3"]
+margin_top = 9.0
+margin_right = 128.0
+margin_bottom = 23.0
+rect_min_size = Vector2( 128, 0 )
+text = "Username:"
+align = 2
+
+[node name="Username" type="Label" parent="VBoxContainer/UserContainer2/InformationPanel3/UsernameContainer3"]
+margin_left = 160.0
+margin_top = 9.0
+margin_right = 303.0
+margin_bottom = 23.0
+size_flags_horizontal = 3
+text = "Ozzadar"
+
+[node name="UsernameContainer4" type="HBoxContainer" parent="VBoxContainer/UserContainer2/InformationPanel3"]
+margin_top = 108.0
+margin_right = 303.0
+margin_bottom = 140.0
+rect_min_size = Vector2( 0, 32 )
+custom_constants/separation = 32
+
+[node name="Label" type="Label" parent="VBoxContainer/UserContainer2/InformationPanel3/UsernameContainer4"]
+margin_top = 9.0
+margin_right = 128.0
+margin_bottom = 23.0
+rect_min_size = Vector2( 128, 0 )
+text = "Username:"
+align = 2
+
+[node name="Username" type="Label" parent="VBoxContainer/UserContainer2/InformationPanel3/UsernameContainer4"]
+margin_left = 160.0
+margin_top = 9.0
+margin_right = 303.0
+margin_bottom = 23.0
+size_flags_horizontal = 3
+text = "Ozzadar"
+
+[node name="UsernameContainer5" type="HBoxContainer" parent="VBoxContainer/UserContainer2/InformationPanel3"]
+margin_top = 144.0
+margin_right = 303.0
+margin_bottom = 176.0
+rect_min_size = Vector2( 0, 32 )
+custom_constants/separation = 32
+
+[node name="Label" type="Label" parent="VBoxContainer/UserContainer2/InformationPanel3/UsernameContainer5"]
+margin_top = 9.0
+margin_right = 128.0
+margin_bottom = 23.0
+rect_min_size = Vector2( 128, 0 )
+text = "Username:"
+align = 2
+
+[node name="Username" type="Label" parent="VBoxContainer/UserContainer2/InformationPanel3/UsernameContainer5"]
+margin_left = 160.0
+margin_top = 9.0
+margin_right = 303.0
+margin_bottom = 23.0
+size_flags_horizontal = 3
+text = "Ozzadar"
+
+[node name="UsernameContainer6" type="HBoxContainer" parent="VBoxContainer/UserContainer2/InformationPanel3"]
+margin_top = 180.0
+margin_right = 303.0
+margin_bottom = 212.0
+rect_min_size = Vector2( 0, 32 )
+custom_constants/separation = 32
+
+[node name="Label" type="Label" parent="VBoxContainer/UserContainer2/InformationPanel3/UsernameContainer6"]
+margin_top = 9.0
+margin_right = 128.0
+margin_bottom = 23.0
+rect_min_size = Vector2( 128, 0 )
+text = "Username:"
+align = 2
+
+[node name="Username" type="Label" parent="VBoxContainer/UserContainer2/InformationPanel3/UsernameContainer6"]
+margin_left = 160.0
+margin_top = 9.0
+margin_right = 303.0
+margin_bottom = 23.0
+size_flags_horizontal = 3
+text = "Ozzadar"
+
+[node name="UsernameContainer7" type="HBoxContainer" parent="VBoxContainer/UserContainer2/InformationPanel3"]
+margin_top = 216.0
+margin_right = 303.0
+margin_bottom = 248.0
+rect_min_size = Vector2( 0, 32 )
+custom_constants/separation = 32
+
+[node name="Label" type="Label" parent="VBoxContainer/UserContainer2/InformationPanel3/UsernameContainer7"]
+margin_top = 9.0
+margin_right = 128.0
+margin_bottom = 23.0
+rect_min_size = Vector2( 128, 0 )
+text = "Username:"
+align = 2
+
+[node name="Username" type="Label" parent="VBoxContainer/UserContainer2/InformationPanel3/UsernameContainer7"]
+margin_left = 160.0
+margin_top = 9.0
+margin_right = 303.0
+margin_bottom = 23.0
+size_flags_horizontal = 3
+text = "Ozzadar"

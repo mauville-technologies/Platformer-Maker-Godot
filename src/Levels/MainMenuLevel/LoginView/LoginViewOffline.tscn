@@ -1,0 +1,215 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://src/Levels/MainMenuLevel/LoginView/LoginView.gd" type="Script" id=1]
+[ext_resource path="res://fonts/Coaster Quake - Personal Use.otf" type="DynamicFontData" id=2]
+[ext_resource path="res://addons/FontAwesome/fontawesome-webfont.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://addons/FontAwesome/FontAwesome.gd" type="Script" id=4]
+[ext_resource path="res://src/Levels/MainMenuLevel/main_menu_theme.tres" type="Theme" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 128
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 3 )
+
+[node name="LoginView" type="Panel"]
+anchor_left = 0.0103411
+anchor_top = -0.0493034
+anchor_right = 1.01034
+anchor_bottom = 0.950697
+margin_left = -18.8023
+margin_top = 54.3003
+margin_right = -18.7991
+margin_bottom = 54.2998
+theme = ExtResource( 5 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -151.5
+margin_top = 356.358
+margin_right = 233.5
+margin_bottom = 437.358
+custom_fonts/font = SubResource( 1 )
+text = "DEMO MODE"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ExitButton" type="Button" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -32.0
+margin_bottom = 32.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FontAwesomeLabel" type="Label" parent="ExitButton"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 2 )
+text = ""
+align = 1
+valign = 1
+script = ExtResource( 4 )
+size = 16
+icon = "times"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -200.0
+margin_top = -40.0
+margin_right = 200.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="EmailBox" type="HBoxContainer" parent="VBoxContainer"]
+margin_right = 399.0
+margin_bottom = 18.0
+
+[node name="Label" type="Label" parent="VBoxContainer/EmailBox"]
+margin_right = 128.0
+margin_bottom = 18.0
+rect_min_size = Vector2( 128, 0 )
+text = "Email"
+
+[node name="Email" type="LineEdit" parent="VBoxContainer/EmailBox"]
+margin_left = 132.0
+margin_right = 399.0
+margin_bottom = 18.0
+size_flags_horizontal = 3
+text = "demo@demo.com"
+clear_button_enabled = true
+caret_blink = true
+caret_blink_speed = 0.5
+
+[node name="PasswordBox" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 22.0
+margin_right = 399.0
+margin_bottom = 40.0
+
+[node name="Label" type="Label" parent="VBoxContainer/PasswordBox"]
+margin_right = 128.0
+margin_bottom = 18.0
+rect_min_size = Vector2( 128, 0 )
+text = "Password"
+
+[node name="Password" type="LineEdit" parent="VBoxContainer/PasswordBox"]
+margin_left = 132.0
+margin_right = 399.0
+margin_bottom = 18.0
+size_flags_horizontal = 3
+text = "password"
+secret = true
+clear_button_enabled = true
+caret_blink = true
+caret_blink_speed = 0.5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 44.0
+margin_right = 399.0
+margin_bottom = 76.0
+rect_min_size = Vector2( 0, 32 )
+size_flags_horizontal = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LoginButton" type="Button" parent="VBoxContainer/HBoxContainer"]
+margin_right = 399.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 128, 0 )
+size_flags_horizontal = 3
+
+[node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer/LoginButton"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "Login"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GuestButton" type="Button" parent="VBoxContainer"]
+margin_top = 80.0
+margin_right = 399.0
+margin_bottom = 128.0
+rect_min_size = Vector2( 0, 48 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="VBoxContainer/GuestButton"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "GUEST"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RegisterButton" type="Button" parent="VBoxContainer"]
+margin_top = 132.0
+margin_right = 399.0
+margin_bottom = 148.0
+rect_min_size = Vector2( 0, 16 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="VBoxContainer/RegisterButton"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "I don't have an account."
+align = 1
+valign = 1
+
+[node name="ErrorMessage" type="Label" parent="VBoxContainer"]
+visible = false
+margin_top = 80.0
+margin_right = 400.0
+margin_bottom = 94.0
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "ERROR MESSAGE GOES HERE"
+align = 1
+autowrap = true
+
+[node name="OfflineButton" type="Button" parent="."]
+margin_left = 809.0
+margin_top = 500.0
+margin_right = 1194.0
+margin_bottom = 648.0
+
+[node name="Label" type="Label" parent="OfflineButton"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 23.0
+margin_right = -27.0
+text = "DEMO"
+align = 1
+valign = 1
+autowrap = true
+[connection signal="pressed" from="ExitButton" to="." method="_quit_game"]
+[connection signal="text_entered" from="VBoxContainer/EmailBox/Email" to="." method="_on_form_submit"]
+[connection signal="text_entered" from="VBoxContainer/PasswordBox/Password" to="." method="_on_form_submit"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/LoginButton" to="." method="_login"]
+[connection signal="pressed" from="VBoxContainer/RegisterButton" to="." method="_on_RegisterButton_pressed"]
+[connection signal="pressed" from="OfflineButton" to="." method="_offline_mode"]

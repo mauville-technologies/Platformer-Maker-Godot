@@ -1,0 +1,55 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://assets/BG/mountains.png" type="Texture" id=1]
+[ext_resource path="res://src/Components/TilemapBackgroundComponent/TilemapBackgroundComponent.gd" type="Script" id=2]
+[ext_resource path="res://assets/BG/BG - pure cave.png" type="Texture" id=3]
+[ext_resource path="res://assets/BG/BG/FreeAssetPack/sky.png" type="Texture" id=4]
+[ext_resource path="res://assets/BG/BG/FreeAssetPack/rocks_1.png" type="Texture" id=5]
+[ext_resource path="res://src/Components/ScrollingTextureComponent/ScrollingTextureComponent.tscn" type="PackedScene" id=6]
+[ext_resource path="res://assets/BG/BG/FreeAssetPack/clouds_2.png" type="Texture" id=7]
+
+[node name="TilemapBackgroundComponent" type="CanvasLayer"]
+pause_mode = 2
+script = ExtResource( 2 )
+
+[node name="Anchor" type="Node2D" parent="."]
+
+[node name="Top" type="Node2D" parent="Anchor"]
+position = Vector2( 0, -1080 )
+
+[node name="InfiniteSky" parent="Anchor/Top" instance=ExtResource( 6 )]
+margin_right = 1920.0
+margin_bottom = 1080.0
+texture = ExtResource( 4 )
+speed_multiplier = Vector2( 2, 0 )
+
+[node name="Clouds" parent="Anchor/Top" instance=ExtResource( 6 )]
+margin_right = 1920.0
+margin_bottom = 1080.0
+texture = ExtResource( 7 )
+speed_multiplier = Vector2( 1.5, 0 )
+
+[node name="Mountains" parent="Anchor/Top" instance=ExtResource( 6 )]
+margin_right = 1920.0
+margin_bottom = 1080.0
+texture = ExtResource( 5 )
+speed_multiplier = Vector2( 1.1, 0 )
+
+[node name="Bottom" type="Node2D" parent="Anchor"]
+position = Vector2( 0, -1080 )
+
+[node name="InfiniteCave" parent="Anchor/Bottom" instance=ExtResource( 6 )]
+margin_top = 1080.0
+margin_right = 1920.0
+margin_bottom = 2160.0
+texture = ExtResource( 3 )
+speed_multiplier = Vector2( 2, 0 )
+
+[node name="Stalags" parent="Anchor/Bottom" instance=ExtResource( 6 )]
+modulate = Color( 0.054902, 0.054902, 0.054902, 1 )
+margin_top = 1080.0
+margin_right = 1920.0
+margin_bottom = 2160.0
+texture = ExtResource( 1 )
+flip_v = true
+speed_multiplier = Vector2( 1.1, 0 )

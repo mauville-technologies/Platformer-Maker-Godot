@@ -1,0 +1,3 @@
+[submodule "castledb-godot"]
+	path = addons/castledb-godot
+	url = https://github.com/mauville-technologies/castledb-godot

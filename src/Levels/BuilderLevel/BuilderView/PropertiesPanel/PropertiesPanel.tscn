@@ -1,0 +1,69 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://src/Levels/BuilderLevel/BuilderView/PropertiesPanel/Properties/Rotation/RotationControl.tscn" type="PackedScene" id=1]
+[ext_resource path="res://fonts/Accuratist/Accuratist.otf" type="DynamicFontData" id=2]
+[ext_resource path="res://src/Levels/BuilderLevel/BuilderView/PropertiesPanel/PropertiesPanel.gd" type="Script" id=3]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.45098, 0.45098, 0.45098, 0.0705882 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 24
+font_data = ExtResource( 2 )
+
+[node name="PropertiesPanel" type="Panel"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = -500.0
+margin_top = -290.0
+margin_right = -150.0
+margin_bottom = 291.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 16.0
+margin_top = 16.0
+margin_right = -16.0
+margin_bottom = 16.0
+custom_constants/separation = 32
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="VBoxContainer"]
+margin_right = 318.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 0, 64 )
+size_flags_horizontal = 3
+custom_styles/panel = SubResource( 1 )
+
+[node name="Label" type="Label" parent="VBoxContainer/Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+custom_fonts/font = SubResource( 2 )
+text = "Object Properties"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RotationControl" parent="VBoxContainer" instance=ExtResource( 1 )]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 0.0
+margin_top = 96.0
+margin_right = 318.0
+margin_bottom = 133.0
+alignment = 2
+
+[node name="Tween" type="Tween" parent="."]

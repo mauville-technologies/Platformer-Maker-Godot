@@ -1,0 +1,127 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://src/Levels/PlayLevel/PlayLevel.gd" type="Script" id=1]
+[ext_resource path="res://src/Levels/PlayLevel/PlayLevelStateMachine.gd" type="Script" id=2]
+[ext_resource path="res://src/Levels/MainMenuLevel/main_menu_theme.tres" type="Theme" id=3]
+
+[node name="PlayLevel" type="Control"]
+pause_mode = 2
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PlayLevelStateMachine" type="Node" parent="."]
+script = ExtResource( 2 )
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ElapsedTime" type="Label" parent="CanvasLayer"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -500.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 500, 0 )
+text = "77:77:777"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PauseMenu" type="CanvasLayer" parent="."]
+
+[node name="PauseMenuPanel" type="Panel" parent="PauseMenu"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -263.0
+margin_top = -150.0
+margin_right = 263.0
+margin_bottom = 150.0
+theme = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="PauseMenu/PauseMenuPanel"]
+anchor_right = 1.0
+margin_top = 45.1126
+margin_bottom = 59.1126
+text = "GAME PAUSED"
+align = 1
+valign = 1
+
+[node name="RestartButton" type="Button" parent="PauseMenu/PauseMenuPanel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -235.654
+margin_top = -64.7511
+margin_right = 238.346
+margin_bottom = 27.2489
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="PauseMenu/PauseMenuPanel/RestartButton"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "RESTART"
+align = 1
+valign = 1
+
+[node name="SettingsButton" type="Button" parent="PauseMenu/PauseMenuPanel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -236.0
+margin_top = 34.1223
+margin_right = 238.0
+margin_bottom = 62.1223
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Label2" type="Label" parent="PauseMenu/PauseMenuPanel/SettingsButton"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "SETTINGS"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="QuitButton" type="Button" parent="PauseMenu/PauseMenuPanel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -236.0
+margin_top = 68.947
+margin_right = 238.0
+margin_bottom = 96.947
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Label3" type="Label" parent="PauseMenu/PauseMenuPanel/QuitButton"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "QUIT"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="pressed" from="PauseMenu/PauseMenuPanel/RestartButton" to="." method="retry"]
+[connection signal="pressed" from="PauseMenu/PauseMenuPanel/QuitButton" to="." method="quit_to_menu"]

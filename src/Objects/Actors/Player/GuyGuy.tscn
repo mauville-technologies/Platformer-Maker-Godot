@@ -1,0 +1,156 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://src/Objects/Actors/Player/PlayerInputHandler.gd" type="Script" id=1]
+[ext_resource path="res://src/Objects/Actors/Player/Player.gd" type="Script" id=2]
+[ext_resource path="res://src/Objects/Actors/Player/PlayerCameraZoomController.gd" type="Script" id=3]
+[ext_resource path="res://src/Objects/Actors/Player/PlayerCamera.gd" type="Script" id=4]
+[ext_resource path="res://assets/Actors/Player/GuyGuy/GuyGuy_tex.png" type="Texture" id=5]
+[ext_resource path="res://assets/Actors/Player/GuyGuy/GuyGuy_ske.json" type="GDDragonBonesResource" id=6]
+
+[node name="Player" type="KinematicBody2D"]
+z_index = 3
+collision_mask = 14
+script = ExtResource( 2 )
+
+[node name="UncrouchDetector" type="RayCast2D" parent="."]
+position = Vector2( 0.225929, 22.0672 )
+rotation = -3.1407
+enabled = true
+cast_to = Vector2( 0, 96 )
+collision_mask = 12
+
+[node name="FloorDetector" type="RayCast2D" parent="."]
+position = Vector2( 0.225929, 22.0672 )
+enabled = true
+cast_to = Vector2( 0, 20 )
+collision_mask = 8
+
+[node name="Sprite" type="GDDragonBones" parent="."]
+position = Vector2( 0, -20 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 5 )
+resource = ExtResource( 6 )
+playback/curr_animation = "SwimIdle"
+playback/loop = 1
+
+[node name="BodyCollision" type="CollisionPolygon2D" parent="."]
+position = Vector2( 0, -25 )
+scale = Vector2( 2.56795, 5.28222 )
+polygon = PoolVector2Array( -5, 6, 5, 6, 5, 0, -5, 0 )
+
+[node name="EnemyDetector" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="Collision" type="CollisionPolygon2D" parent="EnemyDetector"]
+modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 0, -25 )
+scale = Vector2( 2.568, 5.282 )
+polygon = PoolVector2Array( -5.5, 9.25, 5.5, 9.25, 5.5, -1.75, -5.5, -1.75 )
+
+[node name="Stomper" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 10
+
+[node name="Collision" type="CollisionPolygon2D" parent="Stomper"]
+modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 0, -25 )
+scale = Vector2( 2.568, 5.282 )
+polygon = PoolVector2Array( -5.5, 9.25, 5.5, 9.25, 5.5, -1.75, -5.5, -1.75 )
+
+[node name="Header" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 14
+
+[node name="Collision" type="CollisionPolygon2D" parent="Header"]
+modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 0, -25 )
+scale = Vector2( 2.568, 5.282 )
+polygon = PoolVector2Array( -5.5, 9.25, 5.5, 9.25, 5.5, -1.75, -5.5, -1.75 )
+
+[node name="PlayerInputHandler" type="Node" parent="."]
+script = ExtResource( 1 )
+
+[node name="Control" type="Control" parent="."]
+visible = false
+modulate = Color( 1, 1, 1, 0.413334 )
+self_modulate = Color( 1, 1, 1, 0.447059 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -37.7466
+margin_top = -71.5407
+margin_right = 2.25337
+margin_bottom = -58.5407
+rect_scale = Vector2( 1.8, 1.8 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Control"]
+margin_right = 40.0
+margin_bottom = 14.0
+text = "oof"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PlayerCameraZoomController" type="Node2D" parent="."]
+visible = false
+position = Vector2( 1.13763, -26.1649 )
+script = ExtResource( 3 )
+
+[node name="Camera2D" type="Camera2D" parent="PlayerCameraZoomController"]
+current = true
+limit_smoothed = true
+smoothing_enabled = true
+smoothing_speed = 20.0
+drag_margin_left = 0.4
+drag_margin_top = 0.4
+drag_margin_right = 0.4
+drag_margin_bottom = 0.5
+script = ExtResource( 4 )
+
+[node name="Tween" type="Tween" parent="PlayerCameraZoomController/Camera2D"]
+
+[node name="Left" type="Node2D" parent="PlayerCameraZoomController"]
+position = Vector2( -480, 0 )
+
+[node name="Down" type="RayCast2D" parent="PlayerCameraZoomController/Left"]
+cast_to = Vector2( 0, 1080 )
+collision_mask = 8
+
+[node name="Up" type="RayCast2D" parent="PlayerCameraZoomController/Left"]
+cast_to = Vector2( 0, -1080 )
+collision_mask = 8
+
+[node name="Middle" type="Node2D" parent="PlayerCameraZoomController"]
+
+[node name="Down" type="RayCast2D" parent="PlayerCameraZoomController/Middle"]
+cast_to = Vector2( 0, 1080 )
+collision_mask = 8
+
+[node name="Up" type="RayCast2D" parent="PlayerCameraZoomController/Middle"]
+enabled = true
+cast_to = Vector2( 0, -1080 )
+collision_mask = 8
+
+[node name="Right" type="Node2D" parent="PlayerCameraZoomController"]
+position = Vector2( 480, 0 )
+
+[node name="Down" type="RayCast2D" parent="PlayerCameraZoomController/Right"]
+cast_to = Vector2( 0, 1080 )
+collision_mask = 8
+
+[node name="Up" type="RayCast2D" parent="PlayerCameraZoomController/Right"]
+cast_to = Vector2( 0, -1080 )
+collision_mask = 8
+[connection signal="body_entered" from="EnemyDetector" to="." method="_on_enemy_body_entered"]
+[connection signal="body_exited" from="EnemyDetector" to="." method="_on_enemy_body_exited"]
+[connection signal="body_entered" from="Stomper" to="." method="stomp_enter"]
+[connection signal="body_exited" from="Stomper" to="." method="stomp_exit"]
+[connection signal="body_entered" from="Header" to="." method="head_enter"]
+[connection signal="body_exited" from="Header" to="." method="head_exit"]

@@ -1,0 +1,90 @@
+# Use the latest 2.1 version of CircleCI pipeline process engine. See: https://circleci.com/docs/2.0/configuration-reference
+version: 2
+
+jobs:
+  build:
+    docker:
+        - image: buildpack-deps:eoan
+    steps:
+      - checkout
+      - add_ssh_keys:
+          fingerprints:
+              - "7c:6a:20:b5:a4:1d:a7:b5:e1:c7:2c:81:ca:34:d7:96"
+      - run:
+          name: Pull Submodules
+          command: |
+            git submodule init
+            git submodule update --remote --init --recursive
+
+      - run:
+          name: Install Dependencies
+          command: |
+            apt-get update
+            apt-get -y install wget zip unzip
+      - run:
+          name: Download Godot 3.2.51 Dragonbones
+          command: |
+            wget -q -O headless.zip https://e4e19034-499b-463a-8523-599ecd650039.filesusr.com/archives/4deafc_bfe68f94b24a4a4dbdcaed582e38a7d9.zip?dn=godot-dragonbones_3.2.51_headless-x11.64
+            unzip headless.zip 
+            mv godot-dragonbones_3.2.51_headless-x11.64 godot
+            chmod +x godot
+      - run:
+          name: Download Godot 3.2.51 Dragonbones Export Templates
+          command: |
+            wget -q -O templates.zip https://e4e19034-499b-463a-8523-599ecd650039.filesusr.com/archives/4deafc_a84047350b3e4bacad9a4e0c57ee1d54.zip?dn=godot-dragonbones_3.2.51_templates.zip
+            mkdir -p ~/.local/share/godot-dragonbones/templates
+            unzip templates.zip -d ~/.local/share/godot-dragonbones/templates/
+            mv ~/.local/share/godot-dragonbones/templates/templates ~/.local/share/godot-dragonbones/templates/3.2.51.stable
+      - run:
+          name: Export win64 build
+          command: |
+            mkdir -p win64
+
+            set +e;
+            ./godot --export win64 project.godot $PWD/win64/Platformer_Mission.exe
+            set -e;
+            
+      - run:
+          name: Zip exported build
+          command: |
+            zip ${CIRCLE_BUILD_NUM}.zip win64/*
+      - run:
+          name: Upload To Server
+          command: |
+            ssh -o "StrictHostKeyChecking=no" ozzadar@ozzadar.com 'mkdir -p platformer_mission/builds/'
+            scp -rp -o "StrictHostKeyChecking=no" ${CIRCLE_BUILD_NUM}.zip ozzadar@ozzadar.com:platformer_mission/builds/
+      - run:
+          name: Tag commit
+          command: |
+            git config user.email "p.a.mauviel@gmail.com"
+            git config user.name "Paul Mauviel"
+            git tag ${CIRCLE_BUILD_NUM}
+            git push origin $CIRCLE_BUILD_NUM
+
+  release:
+    machine:
+      enabled: true
+    steps:
+      - checkout
+      - run:
+          name: Fake step
+          command: |
+            echo Hello ${CIRCLE_BUILD_NUM}
+workflows:
+  version: 2
+  workflow:
+    jobs:
+    - build:
+        filters:
+          branches:
+            only:
+              - master
+          tags:
+            ignore: /.*/
+
+    - release:
+        filters:
+          tags:
+            only: /^v[0-9]+(\.[0-9]+)*$/
+          branches:
+            ignore: /.*/

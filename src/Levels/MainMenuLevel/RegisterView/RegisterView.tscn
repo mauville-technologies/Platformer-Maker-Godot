@@ -1,0 +1,218 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://fonts/Coaster Quake - Personal Use.otf" type="DynamicFontData" id=1]
+[ext_resource path="res://src/Levels/MainMenuLevel/RegisterView/RegisterView.gd" type="Script" id=2]
+[ext_resource path="res://addons/FontAwesome/fontawesome-webfont.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://addons/FontAwesome/FontAwesome.gd" type="Script" id=4]
+[ext_resource path="res://src/Levels/MainMenuLevel/main_menu_theme.tres" type="Theme" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 128
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 3 )
+
+[node name="RegisterView" type="Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 5 )
+script = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -121.5
+margin_top = 327.179
+margin_right = 121.5
+margin_bottom = 408.179
+custom_fonts/font = SubResource( 1 )
+text = "REGISTER"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="QuitButton" type="Button" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -32.0
+margin_bottom = 32.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FontAwesomeLabel" type="Label" parent="QuitButton"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 2 )
+text = ""
+align = 1
+valign = 1
+script = ExtResource( 4 )
+size = 16
+icon = "times"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -200.0
+margin_top = -68.0
+margin_right = 200.0
+margin_bottom = 68.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="EmailBox" type="HBoxContainer" parent="VBoxContainer"]
+margin_right = 400.0
+margin_bottom = 18.0
+
+[node name="Label" type="Label" parent="VBoxContainer/EmailBox"]
+margin_right = 128.0
+margin_bottom = 18.0
+grow_horizontal = 2
+grow_vertical = 2
+rect_min_size = Vector2( 128, 0 )
+text = "Email"
+
+[node name="Email" type="LineEdit" parent="VBoxContainer/EmailBox"]
+margin_left = 132.0
+margin_right = 400.0
+margin_bottom = 18.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+caret_blink = true
+caret_blink_speed = 0.5
+
+[node name="DisplayNameBox" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 22.0
+margin_right = 400.0
+margin_bottom = 40.0
+
+[node name="Label" type="Label" parent="VBoxContainer/DisplayNameBox"]
+margin_right = 132.0
+margin_bottom = 18.0
+grow_horizontal = 2
+grow_vertical = 2
+rect_min_size = Vector2( 128, 0 )
+text = "Display Name"
+
+[node name="DisplayName" type="LineEdit" parent="VBoxContainer/DisplayNameBox"]
+margin_left = 136.0
+margin_right = 400.0
+margin_bottom = 18.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+caret_blink = true
+caret_blink_speed = 0.5
+
+[node name="PasswordBox" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 44.0
+margin_right = 400.0
+margin_bottom = 62.0
+
+[node name="Label" type="Label" parent="VBoxContainer/PasswordBox"]
+margin_right = 128.0
+margin_bottom = 18.0
+grow_horizontal = 2
+grow_vertical = 2
+rect_min_size = Vector2( 128, 0 )
+text = "Password"
+
+[node name="Password" type="LineEdit" parent="VBoxContainer/PasswordBox"]
+margin_left = 132.0
+margin_right = 400.0
+margin_bottom = 18.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+secret = true
+caret_blink = true
+caret_blink_speed = 0.5
+
+[node name="ConfirmPasswordBox" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 66.0
+margin_right = 400.0
+margin_bottom = 84.0
+
+[node name="Label" type="Label" parent="VBoxContainer/ConfirmPasswordBox"]
+margin_right = 178.0
+margin_bottom = 18.0
+grow_horizontal = 2
+grow_vertical = 2
+rect_min_size = Vector2( 128, 0 )
+text = "Confirm Password"
+
+[node name="ConfirmPassword" type="LineEdit" parent="VBoxContainer/ConfirmPasswordBox"]
+margin_left = 182.0
+margin_right = 400.0
+margin_bottom = 18.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+secret = true
+caret_blink = true
+caret_blink_speed = 0.5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 88.0
+margin_right = 400.0
+margin_bottom = 102.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BackButton" type="Button" parent="VBoxContainer/HBoxContainer"]
+margin_right = 198.0
+margin_bottom = 14.0
+grow_horizontal = 2
+rect_min_size = Vector2( 128, 0 )
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/BackButton"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "Back"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RegisterButton" type="Button" parent="VBoxContainer/HBoxContainer"]
+margin_left = 202.0
+margin_right = 400.0
+margin_bottom = 14.0
+grow_horizontal = 2
+rect_min_size = Vector2( 128, 0 )
+size_flags_horizontal = 3
+
+[node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer/RegisterButton"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "Register"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ErrorMessageLabel" type="Label" parent="VBoxContainer"]
+visible = false
+margin_top = 136.0
+margin_right = 400.0
+margin_bottom = 150.0
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "ERROR MESSAGE GOES HERE"
+align = 1
+[connection signal="pressed" from="QuitButton" to="." method="_quit_game"]
+[connection signal="text_entered" from="VBoxContainer/EmailBox/Email" to="." method="_on_form_submitted"]
+[connection signal="text_entered" from="VBoxContainer/DisplayNameBox/DisplayName" to="." method="_on_form_submitted"]
+[connection signal="text_entered" from="VBoxContainer/PasswordBox/Password" to="." method="_on_form_submitted"]
+[connection signal="text_entered" from="VBoxContainer/ConfirmPasswordBox/ConfirmPassword" to="." method="_on_form_submitted"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/BackButton" to="." method="_back"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/RegisterButton" to="." method="_on_RegisterButton_pressed"]

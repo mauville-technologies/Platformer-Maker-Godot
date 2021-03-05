@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://assets/Objects/RedBlueBlocks/BlueBlock_ske.json" type="GDDragonBonesResource" id=1]
+[ext_resource path="res://assets/Objects/RedBlueBlocks/BlueBlock_tex.png" type="Texture" id=2]
+[ext_resource path="res://src/Objects/Actors/BlueBlock/BlueBlock.gd" type="Script" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 32, 32 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 32, 10 )
+
+[node name="BlueBlock" type="KinematicBody2D"]
+position = Vector2( 0, -0.397209 )
+collision_layer = 4
+collision_mask = 3
+script = ExtResource( 3 )
+_static = true
+
+[node name="Sprite" type="GDDragonBones" parent="."]
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 2 )
+resource = ExtResource( 1 )
+playback/curr_animation = "Init"
+
+[node name="BodyCollision" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="BodyDetector" type="Area2D" parent="."]
+position = Vector2( 0, -42.1048 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BodyDetector"]
+shape = SubResource( 2 )
+[connection signal="body_entered" from="BodyDetector" to="." method="body_entered"]
+[connection signal="body_exited" from="BodyDetector" to="." method="body_exit"]
